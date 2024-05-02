@@ -26,6 +26,10 @@ db.connect((err) => {
   console.log("Reconnected to MySQL.");
 });
 
+
+app.get('/get', (req, res) => {
+    res.status(200).send("Welcome to the MySQL Connection");
+});
 // CREATE
 app.post("/user", (req, res) => {
   const {
